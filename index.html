@@ -18,8 +18,10 @@
 	</script> 
 </head> 
  
-<body> 
-
+<body onload="document.getElementById('login_field').focus()"> 
+    This is a test to see if the browsers password manager is behaving propery. <br/>
+    The one I use happily filled in my github login and password using the default settings - ouch!<br/>
+    Fortunately this can usually be fixed - just make it not fill the form automatically.<br/>
       <form method="post" style="height:0px;overflow:hidden;">
      <input class="text" id="login_field" name="login" style="width: 25em;" tabindex="1" type="text" value="" /> 
         <input onchange="warn()" class="text" id="password" name="password" style="width: 25em;" tabindex="2" type="password" value="" /> 
