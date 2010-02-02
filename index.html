@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<script type="text/javascript" charset="utf-8"> 
+        function warn() {
+            var login = document.getElementById("login_field").value;
+            var pwd = document.getElementById("password").value;
+            if (pwd) {
+            document.getElementById("msg").innerHTML = "Ouch! I did not, but could have sent these somewhere: <br/> login: " + login +"<br/> password: " +  pwd;
+            } else {
+            document.getElementById("msg").innerHTML = "Good! I could not read your login information - usually I can, which is not nice...";
+            }
+        }
+        setTimeout("warn();",3000);
+	</script> 
+</head> 
+ 
+<body> 
+
+      <form method="post" style="height:0px;overflow:hidden;">
+     <input class="text" id="login_field" name="login" style="width: 25em;" tabindex="1" type="text" value="" /> 
+        <input onchange="warn()" class="text" id="password" name="password" style="width: 25em;" tabindex="2" type="password" value="" /> 
+    </form>
+    <h1 id="msg">Thinking...</h1>
+     
+</body> 
+</html>
+
